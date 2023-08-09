@@ -1,0 +1,56 @@
+<html>
+          <head>
+          <title> Icecream & Toppings by Snehal </title>
+          <style>
+                   * { font-size:60px } 
+                   body { background-img:url("img1.jpeg"); }
+          
+           </style>
+           <script>
+                   function show()
+                   { 
+                           event.preventDefault();
+                           let name = document.getElementById("name");
+                           let or = document.getElementById("or");
+                           let tf = document.getElementById("tf");
+                           let cs = document.getElementById("cs");
+                           let sp = document.getElementById("sp");
+                           let ans = document.getElementById("ans");
+
+
+                           let topping = "";
+                           if (or.checked) topping += "Oreo ";
+                           if (tf.checked) topping += "TF ";
+                           if (cs.checked) topping += "Chocalate Syrup ";
+                           if (sp.checked) topping += "Sprinkles ";
+
+                        
+                          
+
+                          
+                           let msg = "name " + name.value + "toppings" + topping;
+                           ans.innerHTML = msg;
+                   }
+
+                          
+
+           </script>
+           <head>
+           <body>
+           <center>
+           <h1> Icecream App </h1>
+           <form onsubmit="show()">
+           <input type="text" placeholder="enter Icecream name" id="name"/>
+           <br><br>
+           <input type="checkbox" id="or"/> Oreo
+           <input type="checkbox" id="tf"/> TF
+           <input type="checkbox" id="cs"/> Chocolate Syrup
+           <input type="checkbox" id="sp"/> Sprinkles
+           <br><br>
+           <input type="submit" value="Order"/>
+           </form>
+           <h2 id="ans"> </h2>
+           </center>
+           </body>
+
+</html>
